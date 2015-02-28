@@ -3,12 +3,16 @@ $:.push File.expand_path('../lib', __FILE__)
 require 'omniauth/reddit/version'
 
 Gem::Specification.new do |s|
-  s.name     = 'omniauth-reddit'
-  s.version  = OmniAuth::Reddit::VERSION
-  s.authors  = ['Jack Dempsey']
-  s.email    = ['jack.dempsey@gmail.com']
-  s.summary  = 'Reddit strategy for OmniAuth'
-  s.homepage = 'https://github.com/mkdynamic/omniauth-reddit'
+  s.name        = 'omniauth-reddit'
+  s.version     = OmniAuth::Reddit::VERSION
+  s.authors     = ['Jack Dempsey', 'Jordan Fowler']
+  s.email       = ['jack.dempsey@gmail.com', 'me@jordanfowler.co']
+  s.summary     = 'OmniAuth strategy for Reddit'
+  s.description = 'OmniAuth strategy for Reddit'
+  s.homepage    = 'https://github.com/TheBreeze/omniauth-reddit'
+  s.license     = "MIT"
+
+  s.rubyforge_project = "omniauth-twitter"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
