@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/TheBreeze/omniauth-reddit'
   s.license     = "MIT"
 
-  s.rubyforge_project = "omniauth-twitter"
+  s.rubyforge_project = "omniauth-reddit"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
