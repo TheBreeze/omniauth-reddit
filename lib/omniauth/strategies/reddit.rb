@@ -1,10 +1,11 @@
-require 'omniauth/strategies/oauth2'
+# require 'omniauth/strategies/oauth2'
+require 'omniauth-oauth'
 require 'base64'
 require 'rack/utils'
 
 module OmniAuth
   module Strategies
-    class Reddit < OmniAuth::Strategies::OAuth2
+    class Reddit < OmniAuth::Strategies::OAuth
       #class NoAuthorizationCodeError < StandardError; end
 
       option :name, "reddit"
@@ -26,6 +27,7 @@ module OmniAuth
       extra do
         {'raw_info' => raw_info}
       end
+
       def raw_info
         @raw_info ||= access_token.get('/api/v1/me').parsed || {}
       end
@@ -50,8 +52,6 @@ module OmniAuth
         ua = Rack::Request.new(@env).user_agent.to_s
         ua.downcase =~ Regexp.new(MOBILE_USER_AGENTS)
       end
-
-
     end
   end
 end
